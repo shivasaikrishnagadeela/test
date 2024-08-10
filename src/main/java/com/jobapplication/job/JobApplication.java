@@ -26,6 +26,11 @@ public class JobApplication {
 		arr.remove(item);
 		return arr;
 	}
+	@DeleteMapping("/deleteAll")
+	public List<String> deleteAll(@RequestParam int item) {
+		arr = new ArrayList<>();
+		return arr;
+	}
 	@PatchMapping("/update")
 	public ResponseEntity<List<String>> updateList(@RequestBody Map<String, String> requestBody) {
 		String oldItem = requestBody.get("oldItem");
